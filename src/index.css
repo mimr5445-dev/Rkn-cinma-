@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@300;400;600;700;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #c9a84c;
+  --color-gold-light: #e4c06e;
+  --color-cyan: #0de8d0;
+  --color-red-accent: #e63946;
+  --color-primary-text: #f0ece0;
+  --color-secondary-text: #a09880;
+  --color-text-dim: #5a5a6e;
+  --color-bg-primary: #07070f;
+  --color-bg-surface: #0e0e1e;
+  --color-bg-elevated: #15152a;
+  
+  --font-sans: 'Tajawal', 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-tajawal: 'Tajawal', sans-serif;
+  --font-cairo: 'Cairo', sans-serif;
+  --font-amiri: 'Amiri', serif;
+}
+
+body {
+  background-color: #07070f;
+  color: #f0ece0;
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism custom design */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+/* Movie Card styling */
+.movie-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(201, 168, 76, 0.25);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 7, 15, 0.95) 0%, rgba(7, 7, 15, 0.4) 60%, transparent 100%);
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.movie-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Glow styles */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(201, 168, 76, 0.5);
+}
+
+/* Customized scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07070f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 3px;
+}

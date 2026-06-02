@@ -1,0 +1,6 @@
+{
+  "name": "Smart Cinema Lounge",
+  "description": "استراحة السينما الذكية - كتلولوج أفلام شخصي تفاعلي مدعوم بالذكاء الاصطناعي",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
